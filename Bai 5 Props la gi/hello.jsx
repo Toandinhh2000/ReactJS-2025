@@ -1,11 +1,5 @@
-function Hello(props) {
-  console.log(props);
-
-  return (
-    <div>
-      {props.content} {props.name}
-    </div>
-  );
+function Hello() {
+  return  <div>Hello cac ban</div>;
 }
 
 export default Hello;

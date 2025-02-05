@@ -1,16 +1,10 @@
 import React from "react";
 
 function App() {
-  const conten1 = <div>This is content1</div>;
-  const content2 = <div>This í content2</div>;
+const isHappy = true;
 
-const isDisplay = false;
-
-if(isDisplay) {
-  return content1;
-}
-
-return content2;
+{isHappy ? <div>Im happy</div> : <div>Im not happy</div>}
+  
 }
 
 export default App;
