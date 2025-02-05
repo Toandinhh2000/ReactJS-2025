@@ -1,13 +1,16 @@
 import React from "react";
 
 function App() {
-  const isRenderCategory= false;
+  const conten1 = <div>This is content1</div>;
+  const content2 = <div>This í content2</div>;
 
-if (isRenderCategory) {
-  return <div>This is category</div>;
-}else {
-  return<div>This is not category</div>;
-}
+const isDisplay = false;
+
+if(isDisplay) {
+  return content1;
 }
 
-export default App
+return content2;
+}
+
+export default App;
