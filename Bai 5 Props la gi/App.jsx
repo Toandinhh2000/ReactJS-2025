@@ -1,10 +1,9 @@
 import React from "react";
+import Courses from "./components/course";
 
 function App() {
-const isHappy = true;
+return<div>handle event in reactJS</div>
 
-{isHappy ? <div>Im happy</div> : <div>Im not happy</div>}
-  
 }
 
 export default App;
