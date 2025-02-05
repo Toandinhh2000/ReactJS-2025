@@ -1,12 +1,25 @@
 export default function Courses() {
-const courses = ["Javascript", "HTML", "CSS"];
+const courses = [
+{
+  name: 'Javascript',
+  price: '1000',
+},
+{
+  name:'HTML',
+  price:'500',
+},
+{
+  name:'CSS',
+  price:'200',
+}
+]
 
-const renderUI = () => {
-return (
-  <ul>
-  {courses.map(courses, index) => {
-    console.log(<li>{course}</li>);
-  })}
-</ul>;
-};
+return<div>
+<ul>
+  {courses.map(courses, index) =>(
+    return <li>name: {courses.name}</li>
+  )}
+</ul>
+</div>
+
 }
