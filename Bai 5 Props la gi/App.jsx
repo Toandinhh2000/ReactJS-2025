@@ -1,8 +1,17 @@
-import React from "react";
-import Courses from "./components/course";
+import React {useState} from "react";
 
 function App() {
-return<div>handle event in reactJS</div>
+
+const [count, setCount] = useState("day la initial state");
+
+const handleCount = () => {
+setCount(count + 1)
+};
+
+return<div>
+  <div>Count {count}</div>
+  <button onClick={handleCount}>Click me</button>
+</div>;
 
 }
 
