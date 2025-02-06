@@ -1,19 +1,30 @@
 import { useState } from "react";
-import content from "./components/content";
 
 function App() {
-  const[show,setShow] =useState(false);
+  const[todo, setTodo] =useState( {
+id:"",
+name:"",
+  });
 
-  const handleShow = () => {
-    setShow(!show);
+  const[todoList, setTodoList] =useState([
+    {id:1, name: "Danh rang rua mat" },
+  ]);
+
+  const handleGetTodo = (value) => {
+    const randomId =Math.floor(Math.random(100000) * 100000);
+    const todo = {
+      id: randomId,
+      name: value,
+    };
+    setTodo(todo);
   };
 
-  return (
-    <div>
-      <button onClick={handleShow}>Show</button>
-      {show && <Content />}
-    </div>
-  );
-}
-
+  consthandleSubmit = () => {
+    setTodoList(prev) => {
+      return [...prev, todo];
+  });
+};
+const handleDeleteTodo = (id) {
+console.log(id);
+};
 export default App;
