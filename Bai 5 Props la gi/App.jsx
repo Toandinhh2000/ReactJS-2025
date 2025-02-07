@@ -4,11 +4,11 @@ function App() {
   const[count, setCount] = useState(1);
   const[posts, setPosts] = useState([]);
 
-  useEffect(() => {
-    fetch("https://jsonplaceholder.typicode.com/posts")
-  }.then((Response) => Response.json())
-  .then((json) =>setPosts(json));
-}, []);
+  //useEffect(() => {
+   // fetch("https://jsonplaceholder.typicode.com/posts")
+//  }.then((Response) => Response.json())
+ // .then((json) =>setPosts(json));
+ // }, []);
 
 return {
   <div>
@@ -20,6 +20,6 @@ return<div key={index}>{post.title}></div>;
 })}
 </div>
 );
-}
+};
 
 export default App;
