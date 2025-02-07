@@ -1,25 +1,18 @@
-import React, {useEffect, useState} from "react"
+import React, {useEffect, useRef} from "react"
 
 function App() {
-  const[count, setCount] = useState(1);
-  const[posts, setPosts] = useState([]);
+  const divRef = useRef();
 
-  //useEffect(() => {
-   // fetch("https://jsonplaceholder.typicode.com/posts")
-//  }.then((Response) => Response.json())
- // .then((json) =>setPosts(json));
- // }, []);
+  useEffect(() => {
+    console.log(divRef.current);
+  }, []);
 
-return {
-  <div>
-  <div>{count}</div>
-  <button onClick ={() =>setCount(count + 1)}>Click me</button>
-
-{posts.map((post, index) =>{
-return<div key={index}>{post.title}></div>;
-})}
+  return (
+<div>
+<div ref={divRef}>hello useRef</div>
 </div>
-);
-};
+  );
+}
+
 
 export default App;
