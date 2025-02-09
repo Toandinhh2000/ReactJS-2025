@@ -1,39 +1,37 @@
-import React, {useEffect, useRef, useState} from "react"
-import content from "./components/content";
+import React, {useReducer} from "react";
 
 function App() {
-  const [courses, setCourses] = useState([]);
-  const[name,setName] = useState("");
-  const[price,setPrice] = useState("");
+  const initialState = {
+    count: 0,
+  };
 
-  const handleSubmit = () => {
-    const course = {
-      name,
-      price: +price,
-    };
+  const reducer = (state, action) => {
+    console.log(state);
+    console.log(action);
 
-    setCourses((prev) => [...prev, course]);
-  }
+    switch(action.type) {
+      case"increase":
+      return {
+        count:state.count + 1,
+      };
+      case"decrease":
+      return {
+        count:state.count -1,
+      };
+    }
+  };
+
+  const[state, dispatch] =useReducer(reducer, initialState);
+
+  return (
+    <div>
+    <h3>Count: {state.count}</h3>
+
+    <div>
+      <button onClick={() => dispatch({ type: "increase"})}>Increase</button>
+      <button onClick={() => dispatch({ type: "decrease"})}>Decrease</button>
+    </div>
+    </div>
+  );
 }
-// const total = courses.reduce(cur, course) => {
-// console.log("tinh toan lai");
-// return cur + course.price;
-// }, 0);
-
-const total useMemo(() => {
-  return courses.reduce((cur, course)) => {
-    console.log("tinh toan lai");
-    return cur + course.price;
-  }, 0);
-}, [courses]);
-
-return
-<div>
-  <>
-    <input
-    type="text"
-    placechoder="nhap ten khoa hoc"
-    value={name}
-    onChange={(e) =>setName(e.target.value)}
-</div>
 export default App;
