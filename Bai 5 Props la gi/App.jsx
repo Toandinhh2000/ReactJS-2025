@@ -1,5 +1,15 @@
 function App() {
-  return<div>Hello cac ban</div>;
+  return(
+  <div 
+  style={{
+    color: "red",
+    fontSize: "20px",
+    backgroundColor:"black",
+  }}
+  >
+Hello cac ban</div>;
+</div>
+  );
 }
 
 export default App;
