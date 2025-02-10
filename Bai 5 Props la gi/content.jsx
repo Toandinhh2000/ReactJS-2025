@@ -1,12 +1,9 @@
-import { memo } from "react";
+import "./Content.css";
 
-function content({ handleIncrease}) {
-  console.log("re-render fnc con");
+export default function Content() {
   return (
     <div>
-      <button onClick={handleIncrease}>Click me</button>
+      <div className="content">This is content</div>
     </div>
   );
 }
-
-export default memo(Content);
