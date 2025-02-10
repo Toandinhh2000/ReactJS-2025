@@ -1,14 +1,11 @@
+import Button from "./components/Button/Button";
+
 function App() {
-  return(
-  <div 
-  style={{
-    color: "red",
-    fontSize: "20px",
-    backgroundColor:"black",
-  }}
-  >
-Hello cac ban</div>;
-</div>
+  return (
+  <div>
+    <button primary />
+    <button primary />
+  </div>;
   );
 }
 
